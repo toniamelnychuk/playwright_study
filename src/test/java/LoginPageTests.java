@@ -45,7 +45,7 @@ public class LoginPageTests {
         // Stop tracing and export it into a zip archive.
         String currentTestName = TraceExtension.testName;
         context.tracing().stop(new Tracing.StopOptions()
-                .setPath(Paths.get("trace-" + currentTestName + ".zip")));
+                .setPath(Paths.get("target/trace-" + currentTestName + ".zip")));
         context.close();
     }
 
