@@ -50,7 +50,7 @@ public class LoginPageTests {
     }
 
     void enterCreds(String login, String password) {
-        page.navigate("http://localhost:3000/src/main/resources/login.html");
+        page.navigate("http://localhost:8000/login.html");
         page.locator("input[id=\"username\"]").fill(login);
         page.locator("input[id=\"password\"]").fill(password);
     }
