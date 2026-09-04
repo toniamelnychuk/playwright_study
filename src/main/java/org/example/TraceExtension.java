@@ -14,7 +14,7 @@ public class TraceExtension implements BeforeEachCallback, AfterEachCallback {
     }
 
     @Override
-    public void afterEach(ExtensionContext context) throws Exception {
-
+    public void afterEach(ExtensionContext context) {
+        System.out.println("Test " + testName + " finished");
     }
 }
