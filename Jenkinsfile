@@ -1,13 +1,7 @@
 pipeline {
-    agent {docker { image 'mcr.microsoft.com/playwright/java:v1.62.0-noble' }}
+    agent {docker { image 'mcr.microsoft.com/playwright/java:v1.61.0-noble' }}
 
     stages {
-
-        stage('Build') {
-            steps {
-                sh 'mvn clean compile'
-            }
-        }
 
         stage('Start HTML server') {
             steps {
@@ -17,7 +11,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                sh 'mvn clean test'
             }
         }
     }
