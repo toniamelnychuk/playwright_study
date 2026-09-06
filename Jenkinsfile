@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {docker { image 'mcr.microsoft.com/playwright/java:v1.62.0-noble' }}
 
     stages {
 
