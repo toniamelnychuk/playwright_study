@@ -26,4 +26,15 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            junit testResults: 'target/surefire-reports/*.xml',
+                  allowEmptyResults: true
+
+            archiveArtifacts artifacts: 'target/trace-*.zip,server.log',
+                             allowEmptyArchive: true
+        }
+    }
+
 }
