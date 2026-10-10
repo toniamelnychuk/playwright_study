@@ -1,5 +1,5 @@
 pipeline {
-    agent {docker { image 'mcr.microsoft.com/playwright/java:v1.61.0-noble' }}
+    agent {docker { image 'playwright-java-python:1.61.0' }}
 
     stages {
         stage('Test') {
